@@ -1,57 +1,57 @@
-const galeriaItems = [
+[
     {
         "id": "1",
         "nombre": "espada",
         "peso": "5",
-        "clase": "guerrero",
+        "clase": "guerrero"
     },
     {
         "id": "2",
         "nombre": "arco",
         "peso": "2",
-        "clase": "explorador",
+        "clase": "explorador"
     },
     {
         "id": "3",
         "nombre": "staf",
         "peso": "3",
-        "clase": "mago",
+        "clase": "mago"
     },
     {
         "id": "4",
         "nombre": "armadura pesada",
         "peso": "20",
-        "clase": "guerrero",
+        "clase": "guerrero"
     },
     {
         "id": "5",
         "nombre": "armadura cuero",
         "peso": "8",
-        "clase": "explorador",
+        "clase": "explorador"
     },
     {
         "id": "6",
         "nombre": "tunica",
         "peso": "3",
-        "clase": "mago",
+        "clase": "mago"
     },
     {
         "id": "7",
         "nombre": "botas pesadas",
         "peso": "10",
-        "clase": "guerrero",
+        "clase": "guerrero"
     },
     {
         "id": "8",
         "nombre": "botas de cuero",
         "peso": "3",
-        "clase": "explorador",
+        "clase": "explorador"
     },
     {
         "id": "9",
         "nombre": "botas de tela",
         "peso": "2",
-        "clase": "mago",
+        "clase": "mago"
     },
     {
         "id": "10",
@@ -61,7 +61,7 @@ const galeriaItems = [
         "arma": "Espada",
         "armadura": "Placas",
         "rango": "Melee",
-        "imagen": "assets/images/barbaro.png",
+        "imagen": "assets/images/barbaro.png"
 
     },
     {
@@ -72,7 +72,7 @@ const galeriaItems = [
         "arma": "Arco",
         "armadura": "Cuero",
         "rango": "Distancia",
-        "imagen": "assets/images/explorador.png",
+        "imagen": "assets/images/explorador.png"
 
 
     },
@@ -84,7 +84,7 @@ const galeriaItems = [
         "arma": "Staff",
         "armadura": "Tela",
         "rango": "Distancia",
-        "imagen": "assets/images/mago.png",
+        "imagen": "assets/images/mago.png"
 
 
     },
@@ -96,7 +96,7 @@ const galeriaItems = [
         "arma": "Bandolina",
         "armadura": "Tela",
         "rango": "Distancia",
-        "imagen": "assets/images/bardo.png",
+        "imagen": "assets/images/bardo.png"
 
-    },
+    }
 ]

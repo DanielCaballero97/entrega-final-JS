@@ -1,11 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background: linear-gradient(269deg, rgba(13,13,13,0.7231267507002801) 0%, rgba(0,0,0,0.4542191876750701) 100%),url("../assets/images/fondo.jpg");   
+}
+
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin: 40px;
-    padding: 20px;
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background: rgb(13,13,13);
+    background: linear-gradient(0deg, rgba(13,13,13,0.7819502801120448) 0%, rgba(0,0,0,0.3449754901960784) 100%),url("../assets/images/fondomadera.jpg");
 }
 
-.Personaje {
+
+.inventario {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -30,13 +47,36 @@
 }
 
 .navbar{
-    background-color: rgb(107, 107, 107);
+    background: rgb(13,13,13);
+    background: linear-gradient(0deg, rgba(13,13,13,0.7819502801120448) 0%, rgba(0,0,0,0.8127626050420168) 100%);
+}
+
+.navbar-brand{
+    color: wheat;
 }
 
 .botones{
     border-radius: 5px;
     color: white;
-    background-color: rgb(84, 84, 84);
     padding: 5px;
+    margin: 5px;
     height: 40px;
+}
+
+.img-inv{
+    width: 80%;
+}
+
+
+.form-agregar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(13,13,13);
+    background: linear-gradient(0deg, rgba(13,13,13,0.8127626050420168) 0%, rgba(0,0,0,0.7343312324929971) 100%);
+    padding: 10px;
+    gap: 10px;
 }

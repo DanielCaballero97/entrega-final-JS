@@ -1,3 +1,3 @@
-* ESTE PROYECTO NO ESTA TERMINADO 
-
-    por una gripe que me tiro en cama 5 dias y el curso de react me dejaron atrasadisimo , prometo tener todo para la re entrega , gracias <3
+al principio iba a ser una galeria de items en el cual uno crea su item , llena con los datos y lo guarda , como el inventario de la pagina
+de rol 20 , pero me di cuenta que es mas complicado de lo que pensaba , sin contar que me saco un dolor de cabeza tremendo tratar de usar
+el sweetalert para crear formularios , literal no encontras un tuto decente en google , gracias por su tiempo espero que alcanze :D

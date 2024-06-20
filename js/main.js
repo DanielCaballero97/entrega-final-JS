@@ -80,37 +80,69 @@ function borrarPersonaje(){
     container.innerHTML = "";
     if(localStorage.getItem("Personaje")){
         localStorage.clear();
-        alert('personaje borrado exitosamente');
+        Swal.fire({
+            title: "Personaje Borrado",
+            icon: "success"
+          });
     }else{
-        alert('no hay nada que borrar O_o');
+       Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "No tenes ningun personaje creado :c",
+          });; 
     }
 }
 
 function guardarPersonaje(id){
     if(localStorage.getItem("Personaje")){
-        alert('ya tenes un personaje creado :( , borralo para seleccionar otro ')
-    }else{
-        const nuevoPJ = galeriaItems.find(el => el.id === id);
-        almacenPersonaje.push(nuevoPJ);
-        localStorage.setItem("Personaje", JSON.stringify(almacenPersonaje));
-        alert('personaje creado con exito :D');
-        container.innerHTML = "";}
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "ya tenes un personaje creado :c",
+          })   
+        }else{
+
+
+            fetch('./js/items.json')
+                .then( (res) => res.json() )
+                .then( (data) => { 
+                    const nuevoPJ = data.find(el => el.id === id);
+                    almacenPersonaje.push(nuevoPJ);
+                    localStorage.setItem("Personaje", JSON.stringify(almacenPersonaje));
+
+                }),
+            Swal.fire({
+                title: "Personaje Creado :D",
+                icon: "success"
+            });    
+
+            container.innerHTML = "";}
 
 }
 
 function seleccionPersonaje(){
     container.innerHTML = "";
-    const claseElegida = galeriaItems.slice(9, 13);
-    claseElegida.forEach((el, index) => {
-        crearCard(el, index);
-
-    })};
+    fetch('./js/items.json')
+    .then( (res) => res.json() )
+    .then( (data) => {
+        claseElegida = data.slice(9,13)
+        claseElegida.forEach((el, index) => {
+            crearCard(el, index);
+    
+        })
+    })
+    
+  };
 
 function crearPersonaje(){
     if(container.innerHTML)
         container.innerHTML = "";
     if(localStorage.getItem("Personaje")){
-        alert('ya tenes un personaje creado :( , borralo para seleccionar otro ')
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "ya tenes un personaje creado :c",
+          })
     }else{
         seleccionPersonaje();
     };
@@ -121,8 +153,14 @@ function mostrarPersonaje(perso){
     container.innerHTML = "";
     if(localStorage.getItem("Personaje")){
         crearCard(perso[0] , 0)
+        boton.remove();
     }else{
-        alert('no tenes un personaje creado che :/ ')
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "No tenes ningun personaje creado :c",
+            footer: '<a href="https://www.youtube.com/watch?v=35XFAkwmU4c&ab_channel=JavierAbancens">bajar el volumen</a>'
+          });
     }
 }
 
